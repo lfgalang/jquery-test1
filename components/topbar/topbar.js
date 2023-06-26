@@ -1,26 +1,36 @@
+function fetchToGetHost() {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const response = await fetch('../../config.json');
+        if (response.ok) {
+          const data = await response.json();
+          const host = data.host;
+          resolve(host);
+        } else {
+          reject(new Error('Error al obtener el archivo config.json'));
+        }
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
 
 
+$(document).ready(async function () {
+    try {
+        const host = await fetchToGetHost();
 
+        console.log('host', host)
 
-const title = document.createElement('h1')
-title.innerHTML = "<h1>Perritos</h1>"
-document.body.append(title)
+        // Asignar la URL completa para redirigir al hacer clic en los botones
+        $("#homeButton").click(function () {
+            window.location.href = `${host}/`;
+        });
 
-const button = document.createElement('button')
-button.innerText = "clickitr"
-button.addEventListener('click', () => {
-    console.log("por aca vamo")
-})
-document.body.append(button)
-
-
-//Functions
-function printInfo() {
-    return (`
-            <h1 class="sliderH1">
-                impresion desde slider 
-                <h3>another tag</h3>
-            </h1>
-        `)
-}
-document.body.innerHTML = printInfo()
+        $("#dlnetNimbusButton").click(function () {
+            window.location.href = `${host}/pages/dlnetNimbus/dlnetNimbus.html`;
+        });
+    } catch (error) {
+        console.error(error);
+    }
+});

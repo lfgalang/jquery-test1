@@ -1,13 +1,21 @@
-<!-- Link the slider.css file -->
-<!-- <link rel="stylesheet" type="text/css" href="../slider/slider.css"> -->
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dlnetNimbus</title>
+    <link rel="stylesheet" type="text/css" href="../../components/topbar/topbar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../components/topbar/topbar.js"></script>
+    <script src="dlnetNimbus.js"></script>
+</head>
 <body>
-    <div class="topbar">
-        Hola topbar
-    </div>
+    <div id="topbarContainer"></div>
+    <h1>Welcome to the dlnetNimbus Page</h1>
+    <!-- Resto del contenido de la página -->
+    
+    <script>
+        $(document).ready(function() {
+            $("#topbarContainer").load("../../components/topbar/topbar.html");
+        });
+    </script>
 </body>
-
-<!-- Scripts -->
-<!-- <script src="../slider/slider.js" type="module"></script> -->
-<script src="../../functions/mathFunctions/sum.js"></script>
-<script src="/functions/cssFunctions/linkCss.js"></script>
+</html>

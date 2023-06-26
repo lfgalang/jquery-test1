@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-
-<body>
-
-    <h1>Home</h1>
-    <div class="topbar">
-        <iframe src="../../components/topbar/topbar.html" frameborder="0"></iframe>
-    </div>
-
-    <div class="slider">
-        <iframe src="../../components/slider/slider.html" frameborder="0"></iframe>
-    </div>
-
-    <button class="button1">Click</button>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/page/page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../home/home.js"></script>
-    <script src="/functions/cssFunctions/linkCss.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../components/topbar/topbar.css">
+</head>
+<body>
+    <div id="topbarContainer"></div>
+    <h1>Welcome to the Home Page</h1>
+    <!-- Resto del contenido de la página -->
+    
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "../../components/topbar/topbar.html",
+                dataType: "html",
+                success: function(data) {
+                    $("#topbarContainer").html(data);
+                    var script = document.createElement("script");
+                    script.src = "../../components/topbar/topbar.js";
+                    document.head.appendChild(script);
+                }
+            });
+        });
+    </script>
 </body>
-
-
 </html>
