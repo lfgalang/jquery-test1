@@ -1,6 +1,12 @@
-$(document).ready(function() {
-    $.get('../../components/topbar/topbar.html', function(data) {
-        $('.topbar').html(data);
-        $('<link rel="stylesheet" href="../../components/topbar/topbar.css">').appendTo('head');
-    });
+$(document).ready(function () {
+    $("h1").css({ "background": "red" })
+
+    $(".button1").click(() => {
+        console.log($("h1")[0].style.display)
+        if($("h1")[0].style.display === "none"){
+            $("h1").show()
+        }else{
+            $("h1").hide()
+        }
+    })
 });
