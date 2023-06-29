@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Home</title>
     <script src="https://cdn.jsdelivr.net/npm/page/page.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../home/home.js"></script>
 
+    <!-- styles of the components that are linked -->
     <link rel="stylesheet" type="text/css" href="../../components/topbar/topbar.css">
+    <link rel="stylesheet" type="text/css" href="../../components/homeSlider/homeSlider.css">
+    <link rel="stylesheet" type="text/css" href="../../components/homeDescription/homeDescription.css">
+
 </head>
+
 <body>
+
     <div id="topbarContainer"></div>
-    <h1>Welcome to the Home Page</h1>
-    <!-- Resto del contenido de la página -->
-    
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: "../../components/topbar/topbar.html",
-                dataType: "html",
-                success: function(data) {
-                    $("#topbarContainer").html(data);
-                    var script = document.createElement("script");
-                    script.src = "../../components/topbar/topbar.js";
-                    document.head.appendChild(script);
-                }
-            });
-        });
-    </script>
+
+    <div class="homeContainer">       
+
+        <div class="homeLeft"></div>
+
+        
+        <div class="homeCenter">
+            <div id="homeSliderContainer"></div>
+
+            <div id="homeDescriptionContainer"></div>
+
+        </div>
+
+
+        <div class="homeRight">right</div>
+
+    </div>
+
+
+    <!-- Link the scripts to the component -->
+    <script src="/pages/home/home.js"></script>
 </body>
+
 </html>

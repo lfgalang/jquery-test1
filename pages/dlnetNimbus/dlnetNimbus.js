@@ -1,3 +1,9 @@
-// Link the styles from the CSS file
-document.head.appendChild(window.linkCss("../dlnetNimbus/dlnetNimbus.css"));
 
+
+
+$(document).ready(function() {
+
+    //Importing the components
+    $("#topbarContainer").load("../../components/topbar/topbar.html");
+    $("#homeSliderContainer").load("../../components/homeSlider/homeSlider.html");
+});

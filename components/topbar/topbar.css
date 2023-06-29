@@ -1,5 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+
+
+
 .topbarContainer {
-    background-color: blue;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+    background-color: #191A1E;
     color: white;
+    font-family: 'Istok Web', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.topbarContainer button:hover{
+    transform: scale(1.1);
+}
+
+.topbarContainer .left{
+    margin-left: 50px;
+}
+
+.topbarContainer .left button{
+    letter-spacing: 0.5px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topbarContainer .right{
+    margin-right: 50px;
+}
+
+
+
+
+
+
 
