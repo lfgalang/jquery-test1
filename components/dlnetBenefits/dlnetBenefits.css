@@ -1,0 +1,22 @@
+
+
+.dlnetBenfitsContainer{
+    background: black;
+    background-image: url("../../Assets/images/benefits.svg");
+    
+}
+
+.dlnetBenfitsContainer .cardsContainer{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.dlnetBenfitsContainer .card{
+    background: red;
+    width: 210px;
+    height: 250px;
+    margin: 30px;
+}

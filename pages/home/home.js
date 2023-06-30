@@ -1,11 +1,11 @@
 
 
-    //Importing the components
-    $("#topbarContainer").load("../../components/topbar/topbar.html");
+//Importing the components
+$("#topbarContainer").load("../../components/topbar/topbar.html");
 
-    $("#homeSliderContainer").load("../../components/homeSlider/homeSlider.html");
-    // $("#homeSliderContainer").css({'display':'flex'})
+$("#homeSliderContainer").load("../../components/homeSlider/homeSlider.html");
 
+$("#homeDescriptionContainer").load("../../components/homeDescription/homeDescription.html");
 
-    $("#homeDescriptionContainer").load("../../components/homeDescription/homeDescription.html");
+$("#dlnetBenefitsContainer").load("../../components/dlnetBenefits/dlnetBenefits.html");
 

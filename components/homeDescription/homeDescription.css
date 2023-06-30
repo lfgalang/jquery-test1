@@ -1,13 +1,11 @@
-
-
-.homeDescriptionContainer{
+.homeDescriptionContainer {
     background: #E7E7E7;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 93%;
 }
 
-.homeDescriptionContainer .firstDescription{
+.homeDescriptionContainer .firstDescription {
     position: relative;
     display: flex;
     align-items: center;
@@ -16,32 +14,84 @@
     font-weight: 400;
 }
 
-.homeDescriptionContainer .firstDescription .textContainer{
+.homeDescriptionContainer .firstDescription .textContainer {
     width: 480px;
     margin-top: 20px;
 }
 
-.homeDescriptionContainer .firstDescription .textContainer .title{
+.homeDescriptionContainer .title {
     line-height: 30px;
     font-size: 22px;
     font-weight: bold;
 }
 
-.homeDescriptionContainer .firstDescription .textContainer .text{
+
+
+.homeDescriptionContainer .text {
     line-height: 30px;
     font-size: 15px;
     margin-top: 15px;
-    
+
 }
 
 
 
-.homeDescriptionContainer .secondDescription{
+.homeDescriptionContainer .secondDescription {
     width: 100%;
-    height: 540px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeDescriptionContainer .secondDescription .img1 {
+    position: relative;
+    width: 60%;
+    z-index: 2;
 }
 
 
+.homeDescriptionContainer .secondDescription .img2 {
+    position: relative;
+    width: 60%;
+    left: 40%;
+    margin-top: -30%;
+}
+
+.homeDescriptionContainer .secondDescription .logo {
+    position: relative;
+    width: 30%;
+    left: 65%;
+    margin-top: -65%;
+    margin-bottom: 51%;
+}
 
 
+.homeDescriptionContainer .titleTop {
+    position: relative;
+    width: 40%;
+    height: 10px;
+    font-size: max(2vw,22px);
+    font-weight: 600;
+    margin-top: -60%;
+    margin-bottom: 60%;
+    padding-left: 5%;
+}
 
+.homeDescriptionContainer .titleBottom {
+    position: relative;
+    width: 40%;
+    height: 10px;
+    font-size: max(2vw,22px);
+    font-weight: 600;
+    margin-top: -40%;
+    margin-bottom: 39%;
+    padding-left: 45%;
+}
+
+
+.homeDescriptionContainer .secondDescription .img3 {
+    position: relative;
+    height: 20%;
+    margin-top: -20%;
+    padding: 1%;
+}
