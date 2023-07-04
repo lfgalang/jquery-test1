@@ -1,12 +1,14 @@
-$(document).ready(function () {
-    $("h1").css({ "background": "red" })
 
-    $(".button1").click(() => {
-        console.log($("h1")[0].style.display)
-        if($("h1")[0].style.display === "none"){
-            $("h1").show()
-        }else{
-            $("h1").hide()
-        }
-    })
-});
+
+//Importing the components
+$("#topbarContainer").load("../../components/topbar/topbar.html");
+
+$("#homeSliderContainer").load("../../components/homeSlider/homeSlider.html");
+
+$("#homeDescriptionContainer").load("../../components/homeDescription/homeDescription.html");
+
+$("#dlnetBenefitsContainer").load("../../components/dlnetBenefits/dlnetBenefits.html");
+
+$("#productCardsContainer").load("../../components/productCards/productCards.html");
+
+

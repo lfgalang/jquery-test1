@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/page/page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 
+
+    <!-- styles of the components that are linked -->
+    <link rel="stylesheet" type="text/css" href="../../components/topbar/topbar.css">
+    <link rel="stylesheet" type="text/css" href="../../components/homeSlider/homeSlider.css">
+    <link rel="stylesheet" type="text/css" href="../../components/homeDescription/homeDescription.css">
+    <link rel="stylesheet" type="text/css" href="../../components/dlnetBenefits/dlnetBenefits.css">
+    <link rel="stylesheet" type="text/css" href="../../components/productCards/productCards.css">
+
+
+</head>
 
 <body>
 
-    <h1>Home</h1>
-    <div class="topbar">
-        <iframe src="../../components/topbar/topbar.html" frameborder="0"></iframe>
+    <div id="topbarContainer"></div>
+
+    <div class="homeContainer">       
+
+        <div class="homeLeft"></div>
+
+        
+        <div class="homeCenter">
+            <div id="homeSliderContainer"></div>
+
+            <div id="homeDescriptionContainer"></div>
+
+            <div id="dlnetBenefitsContainer"></div>
+
+            <div id="productCardsContainer"></div>
+
+        </div>
+
+
+        <div class="homeRight">right</div>
+
     </div>
 
-    <div class="slider">
-        <iframe src="../../components/slider/slider.html" frameborder="0"></iframe>
-    </div>
 
-    <button class="button1">Click</button>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="../home/home.js"></script>
-    <script src="/functions/cssFunctions/linkCss.js"></script>
+    <!-- Link the scripts to the component -->
+    <script src="/pages/home/home.js"></script>
 </body>
-
 
 </html>

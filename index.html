@@ -1,18 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>DL-Net-Control</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
 
-    <!-- Styles -->
+<head>
+    <title>DLNet </title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page/page.js"></script>
+    <link rel="stylesheet" type="text/css" href="/pages/home/home.css">
+
+    <!-- Router -->
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jqueryrouter/dist/jquery.router.min.js"></script>
+    <script src="node_modules/jquery-deparam/jquery-deparam.js"></script> -->
+
+
 </head>
+
 <body>
-    <div class="home">
-        <iframe src="/pages/home/home.html" frameborder="0"></iframe>
+
+    <div id="pageContainer">
+        <!-- The content of the current page will be loaded here -->
     </div>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.router.add('/', function () {
+                // Lógica para la ruta '/'
+                console.log('Estás en la página de inicio');
+            });
+
+            $.router.add('/dlnetNimbus', function () {
+                // Lógica para la ruta '/dlnetNimbus'
+                console.log('Estás en la página dlnetNimbus');
+            });
+
+            // Inicia el enrutador
+            $.router.run();
+        });
+    </script> -->
+
+    <script>
+        // Función para cargar un componente específico
+        function loadComponent(componentPath, scriptPath) {
+            $("#pageContainer").load(componentPath, function () {
+                var script = document.createElement("script");
+                script.src = scriptPath;
+                document.head.appendChild(script);
+            });
+        }
+
+        $(document).ready(async function () {
+            const currentURL = window.location.pathname;
+            const host = "http://127.0.0.1:5500"; // Cambia esto con tu URL base
+
+            // Rutas disponibles
+            const routes = {
+                "/": {
+                    component: "./pages/home/home.html",
+                    script: "./pages/home/home.js"
+                },
+                "/dlnetNimbus": {
+                    component: "./pages/dlnetNimbus/dlnetNimbus.html",
+                    script: "./pages/dlnetNimbus/dlnetNimbus.js"
+                }
+                // Agrega más rutas según tus necesidades
+            };
+
+            // Verifica si la URL coincide con alguna ruta
+            if (routes[currentURL]) {
+                const { component, script } = routes[currentURL];
+                loadComponent(component, script);
+            } else {
+                // Ruta por defecto si no coincide ninguna
+                loadComponent("./pages/default/default.html", "./pages/default/default.js");
+            }
+        });
+    </script>
+
 </body>
+
 </html>
