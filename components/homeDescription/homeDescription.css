@@ -75,7 +75,7 @@
 .homeDescriptionContainer .titleTop {
     position: relative;
     width: 40%;
-    height: 10px;
+    height: 0px;
     font-size: max(2vw,22px);
     font-weight: 600;
     margin-top: -60%;
@@ -86,11 +86,11 @@
 .homeDescriptionContainer .titleBottom {
     position: relative;
     width: 40%;
-    height: 10px;
+    height: 0px;
     font-size: max(2vw,22px);
     font-weight: 600;
     margin-top: -40%;
-    margin-bottom: 39%;
+    margin-bottom: 42%;
     padding-left: 45%;
 }
 

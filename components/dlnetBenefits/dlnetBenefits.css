@@ -5,6 +5,9 @@
     background-size: cover;
     color: white;
     font-family: 'Inria Serif', serif;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
 }
 
 .dlnetBenfitsContainer .cardsContainer {
@@ -13,6 +16,7 @@
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-around;
+    max-width: 1000px;
 }
 
 .dlnetBenfitsContainer .benefitsTitle {

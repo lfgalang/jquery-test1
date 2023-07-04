@@ -9,3 +9,6 @@ $("#homeDescriptionContainer").load("../../components/homeDescription/homeDescri
 
 $("#dlnetBenefitsContainer").load("../../components/dlnetBenefits/dlnetBenefits.html");
 
+$("#productCardsContainer").load("../../components/productCards/productCards.html");
+
+
