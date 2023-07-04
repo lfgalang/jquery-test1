@@ -1,12 +1,13 @@
-
-
-.dlnetBenfitsContainer{
-    background: black;
+.dlnetBenfitsContainer {
+    background: #191A1E;
     background-image: url("../../Assets/images/benefits.svg");
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Inria Serif', serif;
 }
 
-.dlnetBenfitsContainer .cardsContainer{
+.dlnetBenfitsContainer .cardsContainer {
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -14,9 +15,50 @@
     justify-content: space-around;
 }
 
-.dlnetBenfitsContainer .card{
-    background: red;
+.dlnetBenfitsContainer .benefitsTitle {
+    background: #191A1E;
     width: 210px;
     height: 250px;
     margin: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    background: none;
+}
+
+.dlnetBenfitsContainer .card {
+    background: #191A1E;
+    width: 210px;
+    height: 250px;
+    margin: 30px;
+    border: 1px white solid;
+}
+
+
+
+.dlnetBenfitsContainer .card img {
+    position: relative;
+    margin-top: -30px;
+    background-color: #191A1E;
+    left: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.dlnetBenfitsContainer .card .cardTitle {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    margin-top: -10px;
+}
+
+.dlnetBenfitsContainer .card .cardTitle .text {
+    width: 115px;
+    margin-right: 20px;
+}
+
+.dlnetBenfitsContainer .card .cardDescription {
+    font-size: 11px;
+    line-height: 20px;
+    margin-top: 10px;
+    padding: 10px;
 }

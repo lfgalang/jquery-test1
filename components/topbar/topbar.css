@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
 
 
 
@@ -10,36 +11,31 @@
     z-index: 10;
     background-color: #191A1E;
     color: white;
-    font-family: 'Istok Web', sans-serif;
+    font-family: 'Inria Serif', serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.topbarContainer button:hover{
+.topbarContainer button:hover {
     transform: scale(1.1);
 }
 
-.topbarContainer .left{
+.topbarContainer .left {
     margin-left: 50px;
 }
 
-.topbarContainer .left button{
+.topbarContainer .left button {
     letter-spacing: 0.5px;
     background: none;
     color: white;
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    font-family: 'Inria Serif';
+    font-size: 17px;
 }
 
-.topbarContainer .right{
+.topbarContainer .right {
     margin-right: 50px;
 }
-
-
-
-
-
-
-
